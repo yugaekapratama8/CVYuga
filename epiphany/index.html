@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Epiphany | Spa & Soul Healing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Updated Header with Medium Logo -->
+<header class="bg-white sticky top-0 z-50 shadow">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4">
+    <img src="logo.jpg" alt="Epiphany Logo" class="h-14"> <!-- Reduced logo size -->
+    <nav class="space-x-4 text-sm">
+      <a href="#about" class="hover:text-teal-600">Tentang</a>
+      <a href="#services" class="hover:text-teal-600">Layanan</a>
+      <a href="#promo" class="hover:text-teal-600">Promo</a>
+      <a href="#gallery" class="hover:text-teal-600">Galeri</a>
+      <a href="#booking" class="hover:text-teal-600">Booking</a>
+      <a href="#contact" class="hover:text-teal-600">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero with Slideshow -->
+<section class="relative h-screen overflow-hidden">
+  <div class="absolute inset-0 z-0 animate-fade-slideshow">
+    <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 bg-[url('https://images.unsplash.com/photo-1588776814546-f9f48cdffdcf')] opacity-100"></div>
+    <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 bg-[url('https://source.unsplash.com/1600x900/?spa')] opacity-0"></div>
+    <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 bg-[url('https://source.unsplash.com/1600x900/?relax')] opacity-0"></div>
+  </div>
+  <div class="relative z-10 flex items-center justify-center h-full">
+    <div class="bg-black bg-opacity-60 p-10 rounded-xl text-white text-center max-w-2xl">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Epiphany</h1>
+      <p class="text-xl md:text-2xl mb-6">Mind, Body, and Soul Regenerative Healing</p>
+      <p class="text-md mb-6">Nikmati harmoni sempurna antara relaksasi tubuh, penyegaran pikiran, dan ketenangan jiwa dengan layanan premium dari kami.</p>
+      <a href="#booking" class="bg-teal-500 hover:bg-teal-600 px-6 py-3 rounded-full text-white">Booking Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes fadeSlides {
+  0%, 100% {opacity: 1;}
+  33.333% {opacity: 0;}
+  66.666% {opacity: 0;}
+}
+.animate-fade-slideshow div:nth-child(1) { animation: fadeSlides 15s infinite ease-in-out; animation-delay: 0s; }
+.animate-fade-slideshow div:nth-child(2) { animation: fadeSlides 15s infinite ease-in-out; animation-delay: 5s; }
+.animate-fade-slideshow div:nth-child(3) { animation: fadeSlides 15s infinite ease-in-out; animation-delay: 10s; }
+</style>
+
+
+  <!-- Tentang -->
+  <section id="about" class="py-20 px-6 text-center bg-teal-50">
+    <h2 class="text-4xl font-semibold mb-6">Tentang Epiphany</h2>
+    <p class="max-w-3xl mx-auto text-lg">Epiphany hadir sebagai ruang eksklusif untuk wanita modern yang ingin menyatu kembali dengan dirinya. Kami percaya bahwa setiap wanita berhak mendapatkan perawatan menyeluruh – dari luar dan dalam – untuk meregenerasi energi dan kepercayaan diri. Dengan suasana nyaman, aroma terapi alami, dan terapis profesional, kami ciptakan pengalaman healing yang autentik dan bermakna.</p>
+  </section>
+
+  <!-- Layanan -->
+  <section id="services" class="bg-white py-20 px-6">
+    <h2 class="text-4xl text-center font-semibold mb-10">Layanan Unggulan Kami</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-pink-50 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-2">🌿 Spa Tradisional</h3>
+        <p class="text-sm">Pijat seluruh tubuh menggunakan minyak aromaterapi untuk menghilangkan ketegangan otot, melancarkan sirkulasi darah, dan memberikan rasa nyaman mendalam.</p>
+        <p class="text-teal-700 mt-2 text-sm italic">Cocok untuk relaksasi total dan mengatasi kelelahan fisik.</p>
+      </div>
+      <div class="bg-pink-50 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-2">🔥 Sauna Aromaterapi</h3>
+        <p class="text-sm">Proses pengeluaran racun dari tubuh melalui uap panas yang dikombinasikan dengan aroma terapi seperti lavender dan eucalyptus.</p>
+        <p class="text-teal-700 mt-2 text-sm italic">Membantu detoks dan menenangkan pikiran.</p>
+      </div>
+      <div class="bg-pink-50 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-2">💮 Ratus Herbal</h3>
+        <p class="text-sm">Terapi tradisional kewanitaan menggunakan uap dari rempah alami seperti sirih dan kunyit untuk menjaga kebersihan dan kesegaran area intim.</p>
+        <p class="text-teal-700 mt-2 text-sm italic">Meningkatkan kesehatan reproduksi & kepercayaan diri wanita.</p>
+      </div>
+      <div class="bg-pink-50 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-2">✨ Totok Wajah</h3>
+        <p class="text-sm">Pijatan akupresur ringan pada wajah untuk melancarkan peredaran darah, mengencangkan kulit, dan menyegarkan tampilan wajah.</p>
+        <p class="text-teal-700 mt-2 text-sm italic">Meningkatkan aura kecantikan alami Anda.</p>
+      </div>
+      <div class="bg-pink-50 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-2">🌸 Body Scrub</h3>
+        <p class="text-sm">Lulur alami yang membantu mengangkat sel kulit mati dan memberikan kelembutan serta aroma segar sepanjang hari.</p>
+        <p class="text-teal-700 mt-2 text-sm italic">Kulit bersih, lembut, dan cerah seketika.</p>
+      </div>
+      <div class="bg-pink-50 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-2">🧘‍♀️ Soul Relaxation</h3>
+        <p class="text-sm">Sesi healing dengan suara alam dan meditasi bimbingan untuk menyegarkan jiwa dan mengurangi kecemasan dalam diri.</p>
+        <p class="text-teal-700 mt-2 text-sm italic">Untuk jiwa yang lebih tenang dan bahagia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo -->
+  <section id="promo" class="py-20 px-6 bg-teal-100">
+    <h2 class="text-4xl text-center font-semibold mb-10">💝 Promo & Paket Spesial</h2>
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8 text-center">
+      <h3 class="text-2xl font-bold mb-4">✨ Total Renewal Package</h3>
+      <p class="mb-4">Spa Tradisional + Ratus + Sauna Aromaterapi <br> <span class="text-pink-600 font-semibold">FREE Totok Wajah + Teh Herbal</span></p>
+      <p class="text-lg text-teal-700 font-bold mb-2">Hanya Rp 299.000 <span class="line-through text-gray-400">Rp 470.000</span></p>
+      <p class="text-sm mb-4">Berlaku s/d 31 Juli 2025. Berlaku untuk semua usia 18+.</p>
+      <a href="#booking" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full">Klaim Promo</a>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="gallery" class="py-20 px-6 bg-white">
+    <h2 class="text-4xl font-semibold text-center mb-10">Galeri Suasana</h2>
+    <div class="grid md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+      <img src="https://source.unsplash.com/400x300/?spa" alt="Spa Room" class="rounded-lg shadow">
+      <img src="https://source.unsplash.com/400x300/?relax" alt="Ruang Relaksasi" class="rounded-lg shadow">
+      <img src="https://source.unsplash.com/400x300/?massage" alt="Massage" class="rounded-lg shadow">
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="py-20 px-6 bg-teal-50">
+    <h2 class="text-4xl text-center font-semibold mb-8">Formulir Booking</h2>
+    <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-4">
+      <input type="text" placeholder="Nama Lengkap" class="w-full p-3 border rounded" required>
+      <input type="text" placeholder="No WhatsApp Aktif" class="w-full p-3 border rounded" required>
+      <select class="w-full p-3 border rounded" required>
+        <option value="">-- Pilih Jenis Perawatan --</option>
+        <option>Spa Tradisional</option>
+        <option>Ratus Herbal</option>
+        <option>Sauna Aromaterapi</option>
+        <option>Totok Wajah</option>
+        <option>Body Scrub</option>
+        <option>Soul Relaxation</option>
+      </select>
+      <input type="date" class="w-full p-3 border rounded" required>
+      <input type="time" class="w-full p-3 border rounded" required>
+      <textarea placeholder="Catatan Tambahan (opsional)" class="w-full p-3 border rounded"></textarea>
+      <button class="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded">Kirim Booking via WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-100 py-12 text-center">
+    <h3 class="text-2xl font-semibold mb-4">Hubungi Kami</h3>
+    <p class="mb-2">📍 Jl. Spa Harmoni No. 8, Kota Sejuk</p>
+    <p class="mb-2">📱 WhatsApp: <a href="https://wa.me/6281234567890" class="text-teal-600 hover:underline">0812-3456-7890</a></p>
+    <p class="mb-2">📧 Email: info@epiphanyspa.id</p>
+    <p class="text-sm text-gray-500 mt-6">&copy; 2025 Epiphany – Mind, Body, and Soul Regenerative Healing. All rights reserved.</p>
+  </footer>
+</body>
+</html>
