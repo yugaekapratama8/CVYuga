@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yuga Eka Pratama - Friendly Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style>
+:root {
+  --primary: #38bdf8;
+  --accent: #22d3ee;
+  --bg: #1e293b;
+  --text: #f8fafc;
+  --card: #334155;
+  --muted: #d1d5db;
+  --light-bg: #f1f5f9;
+  --accent2: #fde68a;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background: rgba(51, 65, 85, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 0 0 12px 12px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.5em 1em;
+  border-radius: 7px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  color: var(--primary);
+  background: var(--card);
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 2rem 1.5rem;
+  background: linear-gradient(120deg, #1e3a8a 10%, #38bdf8 90%);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.hero img {
+  width: 120px;
+  height: 120px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  margin: 0 auto 0.5rem auto;
+  display: block;
+  box-shadow: 0 0 15px var(--accent);
+  transition: transform 0.3s ease;
+}
+.hero img:hover {
+  transform: scale(1.1);
+}
+
+.fun-intro {
+  background: var(--accent2);
+  color: #1e293b;
+  padding: 0.6em 1.4em;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  font-weight: 600;
+  font-size: 1.08em;
+  user-select: none;
+}
+
+h1 {
+  font-size: 2.15rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.hero p {
+  margin-top: 0.3rem;
+}
+
+.heroDesc {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 1rem auto 0;
+  font-size: 1.08rem;
+  background: rgba(51,65,85,0.20);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+}
+
+.section {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  padding: 1.5rem 2rem;
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+}
+
+.skills-list {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 18px rgba(0,0,0,0.10);
+}
+.skills-list ul {
+  list-style: square;
+  padding-left: 1.5rem;
+  columns: 2;
+  gap: 2rem;
+  margin-bottom: 0;
+  font-size: 1.05rem;
+}
+@media (max-width: 600px) {
+  .skills-list ul {
+    columns: 1;
+  }
+}
+
+.slideshow-wrapper {
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 0.5rem 0;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  
+}
+
+.slideshow-content {
+  display: flex;
+  gap: 0.6rem;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+}
+.slideshow-wrapper:hover .slideshow-content {
+  animation-play-state: paused;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.slideshow img {
+  width: 80px !important;
+  height: 60px !important;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .slideshow img {
+    width: 110px;
+    height: 75px;
+  }
+}
+
+.slideshow img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+img {
+  max-height: 300px;
+}
+
+.card {
+  background: var(--card);
+  color: var(--text);
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 260px;
+  max-width: 280px;
+  flex: 0 0 auto;
+  position: relative;
+  font-size: 1.1em;
+  user-select: none;
+}
+.card:hover {
+  background: var(--primary);
+  color: var(--bg);
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+.card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--accent2);
+}
+.card p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+}
+.card strong {
+  color: var(--accent2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30,41,59,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: #f8fafc;
+  color: #1e293b;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.24);
+  padding: 2rem;
+  border-radius: 14px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+  user-select: text;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.7rem;
+  right: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #334155;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: var(--primary);
+}
+
+.modal-close {
+  text-align: right;
+  margin-top: 1.5rem;
+}
+.modal-close button {
+  padding: 0.5rem 1.2rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  user-select: none;
+  transition: background 0.2s;
+}
+.modal-close button:hover {
+  background: #0ea5e9;
+}
+
+.contact a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.1em 0.3em;
+  background: rgba(56,189,248,0.06);
+  border-radius: 5px;
+  transition: background 0.15s;
+  user-select: text;
+}
+.contact a:hover {
+  background: #38bdf8;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--light-bg);
+  font-size: 0.96rem;
+  color: var(--muted);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  letter-spacing: 0.01em;
+  user-select: none;
+}
+
+.modal.image-zoom {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal.image-zoom .modal-content {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow: auto;
+}
+
+.modal.image-zoom img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal.image-zoom .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #fff;
+  z-index: 1001;
+}
+
+  </style>
+  
+</head>
+<body>
+  <header>
+    <div><strong>👨‍💻 Yuga Eka Pratama</strong></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-down">
+    <img src="yuga.jpg" alt="Yuga Eka Pratama photo" />
+    <div class="fun-intro">🙌 Let's build something amazing together!</div>
+    <h1>Hi 👋 I'm <span style="color: var(--primary)">Yuga Eka Pratama</span></h1>
+    <p style="font-size:1.13em;">Web Developer • IT Support • Content Creator • Warehouse Specialist</p>
+    <div class="heroDesc">
+      I build modern websites, manage IT systems, create digital content, and run seamless warehouse operations. My passion? Blending tech skills with real-world impact simple, fast, and fun!
+    </div>
+  </section>
+
+  <section class="section" id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+	<p>
+    I am a dynamic and results-driven professional with a unique blend of expertise in warehouse leadership, web development, IT support, and digital content creation. With nearly three years of hands-on experience managing inventory and shipping logistics alongside a solid track record as a freelance web developer, I bring strong problem-solving skills and a passion for optimizing operations.
+	</p>
+	<p>
+	I excel at blending technical skills with creative thinking and enjoy working across multiple industries to deliver impactful solutions in both physical and digital environments. Whether it's streamlining warehouse workflows or building responsive and SEO-friendly websites, I strive to make processes efficient, intuitive, and user-friendly. Teamwork, curiosity, and a positive attitude are at the core of how I approach every challenge.  </section>
+	</p>
+  <section class="section" id="skills" data-aos="flip-left">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <ul>
+        <li>Inventory Management & Warehouse Operation</li>
+        <li>IT Support & Networking</li>
+        <li>Cloud Server & Computing (Apsara Clouder)</li>
+        <li>Network Administration (LAN/WAN)</li>
+        <li>Web Development (PHP & WordPress)</li>
+        <li>Web Design (Responsive Design)</li>
+        <li>Administration & Inventory Control</li>
+        <li>Cybersecurity</li>
+        <li>Digital Content & Content Management</li>
+        <li>Operating Systems (Linux & Windows)</li>
+        <li>Microsoft Office (Word, Excel, PowerPoint, Outlook, Publisher)</li>
+        <li>Wireless Technology (WiFi, Wireless Networking)</li>
+        <li>Communication & Teamwork</li>
+        <li>English</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="experience" data-aos="fade-right">
+    <h2>Work Experience</h2>
+		<div class="slideshow-wrapper">
+			<div class="slideshow-content">
+      <div class="card" onclick="openModal('modal5')">
+        <h3>☕ Warehouse Coffee Machine Leader</h3>
+        <p><strong>PT. Delifru Utama Indonesia</strong> (Jan 2025 – Present)</p>
+        <p>Click for details</p>
+      </div>
+      <div class="card" onclick="openModal('modal1')">
+        <h3>📦 Warehouse Staff</h3>
+        <p><strong>CV. NR Herbal Care</strong> (Nov 2021 – Jan 2025)</p>
+        <p>Click for details</p>
+      </div>
+      <div class="card" onclick="openModal('modal2')">
+        <h3>💻 Web Developer</h3>
+        <p><strong>Freelance</strong> (Feb 2020 – Present)</p>
+        <p>Click for details</p>
+      </div>
+      <div class="card" onclick="openModal('modal3')">
+        <h3>📢 Content Creator</h3>
+        <p><strong>Bramasta Digital Marketing Agency</strong> (Feb 2023 – Dec 2023)</p>
+        <p>Click for details</p>
+      </div>
+      <div class="card" onclick="openModal('modal4')">
+        <h3>🛠️ PC Support Specialist</h3>
+        <p><strong>PT. Astracom Raya</strong> (Feb 2018 – Apr 2018)</p>
+        <p>Click for details</p>
+      </div>
+      <div class="card" onclick="openModal('modal6')">
+        <h3>⚙️ Instrumentation & Control Engineer</h3>
+        <p><strong>PT. Sinergy Power Source</strong> (Oct 2019 – Feb 2020)</p>
+        <p>Click for details</p>
+      </div>
+	  </div>
+    </div>
+  </section>
+
+	<section class="section" id="projects" data-aos="fade-left">
+	  <h2>Recent Projects</h2>
+	  <div class="slideshow-wrapper">
+		<div class="slideshow-content">
+		  <img src="daebiproject.jpg" alt="Project 1" onclick="openModal('proj1')" />
+		  <img src="rekanteknik.jpg" alt="Project 2" onclick="openModal('proj2')" />
+		  <img src="epi.jpg" alt="Project 3" onclick="openModal('proj3')" />
+		  <img src="mybrainly.jpg" alt="Project 4" onclick="openModal('proj4')" />
+		</div>
+	  </div>
+	</section>
+
+
+  <section class="section" id="certificates" data-aos="zoom-in">
+    <h2>Certificates</h2>
+	<div class="slideshow-wrapper">
+		<div class="slideshow-content">
+      <img src="apsara.jpeg" alt="Apsara Clouder Certificate" onclick="openModal('cert1')" />
+      <img src="cnss.jpg" alt="SCNS Certificate" onclick="openModal('cert2')" />
+      <img src="cisco.jpg" alt="Essentials Cybersecurity Certificate" onclick="openModal('cert3')" />
+      <img src="lsp.jpg" alt="CWNA Certificate" onclick="openModal('cert4')" />
+      <img src="web.jpg" alt="Junior Web Developer Certificate" onclick="openModal('cert5')" />
+      <img src="itgoogle.jpg" alt="IT Support Google Certificate" onclick="openModal('cert6')" />
+    </div>
+	</div>
+  </section>
+
+  <section class="section contact" id="contact" data-aos="fade-up">
+    <h2>Get In Touch</h2>
+    <p>Linkedin: <a href="https://id.linkedin.com/in/yuga-eka-pratama-03b0a1210">Yuga Eka Pratama</a></p>
+	<p>Email: <a href="mailto:yugaekapratama8@gmail.com">yugaekapratama8@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/6281285207554">+62 812-8520-7554</a></p>
+    <p style="margin:1.5em 0 0 0">Let's connect and make your ideas a reality!</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Yuga Eka Pratama. Friendly dev portfolio built with 💙
+  </footer>
+
+  <!-- WORK EXPERIENCE MODALS -->
+  <div class="modal" id="modal1"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+      <h3>Warehouse Staff – CV. NR Herbal Care</h3>
+      <p>
+        <strong>Nov 2021 – Jan 2025</strong><br>
+        Received and inspected goods, signed delivery notes, and recorded in ERP. Organized storage, monitored stock, ensured material availability, applied FIFO & FEFO in stock management, maintained documentation, and regularly coordinated with production and purchasing teams.
+      </p>
+      <div class="modal-close"><button onclick="closeModal('modal1')">Close</button></div>
+    </div></div>
+  <div class="modal" id="modal2"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+      <h3>Web Developer (Freelance)</h3>
+      <p>
+        <strong>Feb 2020 – Present</strong><br>
+        Delivered custom websites focusing on responsive layouts, SEO, and user experience. Utilized PHP & WordPress and often provided training for clients after handover.
+      </p>
+      <div class="modal-close"><button onclick="closeModal('modal2')">Close</button></div>
+    </div></div>
+  <div class="modal" id="modal3"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+      <h3>Content Creator – Bramasta Digital Marketing Agency</h3>
+      <p>
+        <strong>Feb 2023 – Dec 2023</strong><br>
+        Created engaging digital content, increased brand visibility and website traffic, collaborated with marketing teams and helped increase client engagement by 15%.
+      </p>
+      <div class="modal-close"><button onclick="closeModal('modal3')">Close</button></div>
+    </div></div>
+  <div class="modal" id="modal4"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+      <h3>PC Support Specialist – PT. Astracom Raya</h3>
+      <p>
+        <strong>Feb 2018 – Apr 2018</strong><br>
+        Conducted PC maintenance & repair, helped with promotional digital content, and ensured minimized downtime on company machines.
+      </p>
+      <div class="modal-close"><button onclick="closeModal('modal4')">Close</button></div>
+    </div></div>
+  <div class="modal" id="modal5"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+      <h3>Warehouse Coffe Machine Leader – PT. Delifru Utama Indonesia</h3>
+      <p>
+        <strong>Jan 2025 – Present</strong><br>
+        Leading warehouse operations with ERP integration, managing stock, coordinating with logistics and purchasing, optimizing warehouse workflow for efficiency.
+      </p>
+      <div class="modal-close"><button onclick="closeModal('modal5')">Close</button></div>
+    </div></div>
+  <div class="modal" id="modal6"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+      <h3>Instrumentation & Control Engineer – PT. Sinergy Power Source</h3>
+      <p>
+        <strong>Oct 2019 – Feb 2020</strong><br>
+        Key role in PM 5 project (SMB), focusing on hydraulic & instrument controller setup and building LAN networks for communication and automation.
+      </p>
+      <div class="modal-close"><button onclick="closeModal('modal6')">Close</button></div>
+    </div></div>
+
+  <!-- CERTIFICATES MODALS DETAILED -->
+  <div class="modal" id="cert1"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('cert1')">&times;</span>
+      <h3>Apsara Clouder – Cloud Computing</h3>
+      <p>
+        Operator and Manage Cloud Server.<br>
+        <em>This certificate demonstrates an understanding and ability to operate and manage cloud servers using the Apsara Cloud platform, including server deployment, cloud resource management, and security practices in a business environment.</em>
+      </p>
+      <div class="modal-close"><button onclick="closeModal('cert1')">Close</button></div>
+    </div></div>
+  <div class="modal" id="cert2"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('cert2')">&times;</span>
+      <h3>Security Certified Network Specialist (SCNS)</h3>
+      <p>
+        International Cyber Security Institute (ICSI), UK.<br>
+        <em>An internationally recognized certification proving competence in network security, data protection, cyber threat identification, and strategies for securing IT infrastructure.</em>
+      </p>
+      <div class="modal-close"><button onclick="closeModal('cert2')">Close</button></div>
+    </div></div>
+  <div class="modal" id="cert3"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('cert3')">&times;</span>
+      <h3>Essentials Cybersecurity</h3>
+      <p>
+        Cisco.<br>
+        <em>Focuses on fundamentals of cybersecurity: types of threats, digital data protection, use of security technologies, and best practices for keeping IT systems safe.</em>
+      </p>
+      <div class="modal-close"><button onclick="closeModal('cert3')">Close</button></div>
+    </div></div>
+  <div class="modal" id="cert4"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('cert4')">&times;</span>
+      <h3>Certified Wireless Network Administration (CWNA)</h3>
+      <p>
+        BNSP (National Professional Certification Agency).<br>
+        <em>Official recognition from BNSP for mastery of design, installation, and troubleshooting of wireless LAN/WIFI networks including security standards and network management in business environments.</em>
+      </p>
+      <div class="modal-close"><button onclick="closeModal('cert4')">Close</button></div>
+    </div></div>
+  <div class="modal" id="cert5"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('cert5')">&times;</span>
+      <h3>Junior Web Developer</h3>
+      <p>
+        Progate.<br>
+        <em>Certifies basic understanding and capability in web development (HTML, CSS, JavaScript), and the creation of responsive, interactive web pages using modern programming principles.</em>
+      </p>
+      <div class="modal-close"><button onclick="closeModal('cert5')">Close</button></div>
+    </div></div>
+  <div class="modal" id="cert6"><div class="modal-content">
+      <span class="close-btn" onclick="closeModal('cert6')">&times;</span>
+      <h3>IT Support Google Professional</h3>
+      <p>
+        Coursera.<br>
+        <em>International training from Google covering hardware & software troubleshooting, user support, basic network administration, and hands-on IT support in real workplace settings.</em>
+      </p>
+      <div class="modal-close"><button onclick="closeModal('cert6')">Close</button></div>
+    </div></div>
+	
+	<!-- PROJECT IMAGE MODALS -->
+<div class="modal" id="proj1">
+  <div class="modal-content image-modal">
+    <span class="close-btn" onclick="closeModal('proj1')">&times;</span>
+    <img src="daebiproject.jpg" alt="Project 1 Full" />
+  </div>
+</div>
+
+<div class="modal" id="proj2">
+  <div class="modal-content image-modal">
+    <span class="close-btn" onclick="closeModal('proj2')">&times;</span>
+    <img src="rekanteknik.jpg" alt="Project 2 Full" />
+  </div>
+</div>
+
+<div class="modal" id="proj3">
+  <div class="modal-content image-modal">
+    <span class="close-btn" onclick="closeModal('proj3')">&times;</span>
+    <img src="epi.jpg" alt="Project 3 Full" />
+  </div>
+</div>
+
+<div class="modal" id="proj4">
+  <div class="modal-content image-modal">
+    <span class="close-btn" onclick="closeModal('proj4')">&times;</span>
+    <img src="mybrainly.jpg" alt="Project 4 Full" />
+  </div>
+</div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({duration: 1000, once: true});
+    function openModal(id) {
+      const m = document.getElementById(id);
+      m.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', e => {
+        if(e.target === modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+    document.addEventListener('keydown', function(event) {
+      if (event.key === "Escape") {
+        document.querySelectorAll('.modal').forEach(modal => {
+          if (modal.style.display === "flex") {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        });
+      }
+    });
+  </script>
+  <script>
+  document.querySelectorAll('.slideshow-content').forEach(wrapper => {
+    const clone = wrapper.innerHTML;
+    wrapper.innerHTML += clone;
+  });
+</script>
+</body>
+</html>
