@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV. Rekan Teknik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #d62828;
+      --secondary: #1e1e80;
+      --hoverred: #a30000;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="logo.jpg" alt="Logo CV. Rekan Teknik" class="h-10 w-10 rounded-full">
+        <h1 class="text-2xl font-bold">
+          <span class="text-[#1e1e80]">REKAN</span><span class="text-[#d62828]">TEKNIK</span>
+        </h1>
+      </div>
+      <nav class="space-x-4 hidden md:block text-[#1e1e80] font-semibold">
+        <a href="#tentang" class="hover:text-[#d62828]">Tentang</a>
+        <a href="#layanan" class="hover:text-[#d62828]">Layanan</a>
+        <a href="#galeri" class="hover:text-[#d62828]">Galeri</a>
+        <a href="#booking" class="hover:text-[#d62828]">Booking</a>
+        <a href="#kontak" class="hover:text-[#d62828]">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] overflow-hidden">
+    <div class="absolute inset-0 w-full h-full">
+      <div class="slideshow h-full w-full">
+        <img src="a1.jpg" class="absolute w-full h-full object-cover opacity-0 animate-fade" />
+        <img src="a2.jpg" class="absolute w-full h-full object-cover opacity-0 animate-fade delay-[5s]" />
+        <img src="a3.jpg" class="absolute w-full h-full object-cover opacity-0 animate-fade delay-[10s]" />
+      </div>
+      <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+        <div class="text-center text-white z-10">
+          <h2 class="text-4xl font-bold mb-4">Bengkel Las Profesional & Terpercaya</h2>
+          <a href="#booking" class="bg-[#d62828] hover:bg-[#a30000] text-white py-2 px-6 rounded text-lg">Booking Sekarang</a>
+        </div>
+      </div>
+    </div>
+    <style>
+      @keyframes fade {
+        0%, 100% { opacity: 0; }
+        10%, 30% { opacity: 1; }
+      }
+      .slideshow img {
+        animation: fade 15s infinite;
+      }
+      .delay-\[5s\] {
+        animation-delay: 5s;
+      }
+      .delay-\[10s\] {
+        animation-delay: 10s;
+      }
+    </style>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="py-12 px-4 max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4 text-[#d62828]">Tentang Kami</h2>
+    <p class="text-gray-700 text-lg">
+      CV. Rekan Teknik adalah bengkel las berpengalaman sejak 2010. Kami melayani berbagai kebutuhan las seperti pagar, kanopi, teralis, tangga besi, bak truk, serta alat bantu produksi. Kami menjunjung tinggi kualitas, ketepatan waktu, dan kepuasan pelanggan.
+    </p>
+  </section>
+
+  <!-- Layanan -->
+  <section id="layanan" class="bg-gray-100 py-12 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-[#1e1e80]">Layanan Kami</h2>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="bg-white p-6 rounded shadow">
+        <img src="b1.jpg" class="h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-[#d62828] mb-2">Pagar & Pintu Besi</h3>
+        <p>Pembuatan pagar rumah, pintu besi, dan pagar sliding custom.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <img src="b2.jpg" class="h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-[#d62828] mb-2">Kanopi & Atap</h3>
+        <p>Desain dan instalasi kanopi baja ringan dan atap hollow galvanis.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <img src="a1.jpg" class="h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-[#d62828] mb-2">Teralis & Tangga</h3>
+        <p>Teralis jendela dan tangga besi spiral, kokoh dan estetis.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <img src="a2.jpg" class="h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-[#d62828] mb-2">Bak Truk & Pick Up</h3>
+        <p>Modifikasi dan pembuatan bak truk, pick up, serta kendaraan niaga.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <img src="b5.jpg" class="h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-[#d62828] mb-2">Alat Produksi</h3>
+        <p>Pembuatan dan pengelasan alat bantu produksi industri dan UMKM.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri / Slideshow -->
+  <section id="galeri" class="py-12 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center text-[#d62828]">Galeri Proyek</h2>
+    <div class="relative w-full overflow-hidden rounded shadow-lg">
+      <div class="flex animate-slide gap-2" style="width: max-content; animation: slide 30s linear infinite;">
+        <img src="c1.jpg" class="rounded shadow w-96 h-64 object-cover" />
+        <img src="c2.jpg" class="rounded shadow w-96 h-64 object-cover" />
+        <img src="c3.jpg" class="rounded shadow w-96 h-64 object-cover" />
+        <img src="c4.jpg" class="rounded shadow w-96 h-64 object-cover" />
+        <img src="c5.jpg" class="rounded shadow w-96 h-64 object-cover" />
+      </div>
+    </div>
+    <style>
+      @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    </style>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking" class="bg-[#1e1e80] text-white py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Booking Online</h2>
+      <form class="grid md:grid-cols-2 gap-4 bg-white text-black p-6 rounded shadow">
+        <input type="text" placeholder="Nama Anda" class="border p-2 rounded" required />
+        <input type="tel" placeholder="Nomor Telepon" class="border p-2 rounded" required />
+        <select class="border p-2 rounded" required>
+          <option value="">Pilih Layanan</option>
+          <option>Kanopi Baja Ringan</option>
+          <option>Pagar & Pintu</option>
+          <option>Teralis & Tangga</option>
+          <option>Bak Truk</option>
+          <option>Alat Produksi</option>
+        </select>
+        <input type="date" class="border p-2 rounded" required />
+        <textarea placeholder="Catatan Tambahan..." class="md:col-span-2 border p-2 rounded"></textarea>
+        <button type="submit" class="md:col-span-2 bg-[#d62828] hover:bg-[#a30000] text-white py-2 px-4 rounded">Kirim Booking</button>
+      </form>
+      <div class="text-center mt-6">
+        <a href="https://wa.me/628123456789" class="bg-green-500 hover:bg-green-600 py-2 px-4 rounded text-white inline-block">Booking via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="py-12 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4 text-[#1e1e80]">Kontak Kami</h2>
+    <p class="mb-2">📍 Sidodadi, Sentonorejo, Kec. Trowulan, Kabupaten Mojokerto, Jawa Timur 61362</p>
+    <p class="mb-2">📞 Telp/WA: <a href="https://wa.me/628123456789" class="text-[#d62828] underline">0812-3456-789</a></p>
+    <p class="mb-4">📍 <a href="https://maps.app.goo.gl/qpcqXE2Y4F188AkS7" class="text-[#1e1e80] underline" target="_blank">Lihat di Google Maps</a></p>
+    <p>📧 Email: rekanteknik@example.com</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#d62828] text-white text-center py-4">
+    <p>&copy; 2025 CV. Rekan Teknik. Bengkel Las Profesional dan Terpercaya.</p>
+  </footer>
+
+</body>
+</html>
